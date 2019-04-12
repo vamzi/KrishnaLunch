@@ -1,0 +1,119 @@
+﻿/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme. 
+The imported CSS rules must precede all other types of rules.
+*/
+@import '~nativescript-theme-core/css/core.light.css';
+
+/*
+The following CSS rule changes the font size of all UI
+components that have the btn class name.
+*/
+.btn {
+    font-size: 18;
+}
+
+.menu-head {
+    font-size: 28px;
+    font-weight: bold;
+  
+}
+
+.header-bg{
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+
+    border-radius: 0 0 50 50;
+}
+
+
+.week-head {
+    font-size: 20px;
+    font-weight: bold;
+  
+}
+
+.ripple-circle{
+    border-radius: 50;
+}
+
+.pick-items{
+    border-color: #f46b45;
+    color: #F7971E
+}
+.note-head {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30
+  
+}
+.btn-head{
+  
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.btn-text{
+        
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;}
+.btn-bg{
+    background-color: #F7971E;
+}
+.btn-boarder{
+    border-radius: 49 49 49 49;
+    border-color: #ff9800;
+    border-width: 1 1 1 1;
+}
+.lunch-get-head {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F7971E
+  
+}
+
+.pick-up-head {
+    font-size: 18px;
+    color: #F7971E
+}
+
+.qt-head{
+    
+    margin-left: 60px;
+    margin-right:60px;
+    font-size: 34px;
+      color: #F7971E;
+}
+.text-menu-item {
+    font-size: 14px;
+    padding-left: 20px;
+    border-color: red green blue #ff9800;
+  border-width: 0 0 0 5;
+  }
+
+  .text-menu-item2 {
+    font-size: 14px;
+    padding-left: 20px;
+    border-color: red green blue #c66900;
+  border-width: 0 0 0 5;
+  }
+
+  .text-menu-item3 {
+    font-size: 14px;
+    padding-left: 20px;
+    border-color: red #ff9800 blue #c66900;
+  border-width: 0 5 0 0;
+  }

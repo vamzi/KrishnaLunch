@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launch_back " />
+    <foreground>
+    <!-- 10dp padding on each side of 108dp asset -->
+    <inset
+      android:drawable="@drawable/kl"
+       android:insetLeft="30%"
+    android:insetTop="30%"
+    android:insetRight="32%"
+    android:insetBottom="30%" />
+  </foreground>
+    
+</adaptive-icon>

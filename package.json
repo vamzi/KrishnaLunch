@@ -1,0 +1,31 @@
+{
+    "nativescript": {
+        "id": "org.nativescript.KrishnaLunch",
+        "tns-ios": {
+            "version": "5.1.1"
+        },
+        "tns-android": {
+            "version": "5.2.1"
+        }
+    },
+    "description": "NativeScript Application",
+    "license": "SEE LICENSE IN <your-license-filename>",
+    "repository": "<fill-your-repository-here>",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.2",
+        "nativescript-cardview": "^3.1.1",
+        "nativescript-carousel": "^4.1.0",
+        "nativescript-dom": "^2.0.2",
+        "nativescript-pager": "^9.3.15",
+        "nativescript-ripple": "^2.1.0",
+        "nativescript-theme-core": "~1.0.4",
+        "tns-core-modules": "~5.1.0",
+        "xmldom": "^0.1.27",
+        "xpath": "0.0.27"
+    },
+    "devDependencies": {
+        "nativescript-dev-webpack": "~0.19.0"
+    },
+    "gitHead": "9b6565a4513375a33a59c44262dfc1d818a8205e",
+    "readme": "NativeScript Application"
+}

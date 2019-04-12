@@ -1,0 +1,70 @@
+<Page xmlns:RL="nativescript-ripple" xmlns:c="nativescript-pager" xmlns:Card="nativescript-cardview" xmlns:ns="nativescript-carousel" actionBarHidden="true" loaded="onPageLoaded">
+  <ScrollView>
+<StackLayout>
+    <StackLayout class="header-bg" height="240" verticalAlignment="top">
+        <Image marginTop="10" src="res://iconsplash" horizontalAlignment="center" verticalAlignment="center"
+            width="250" height="220" />
+    </StackLayout>
+    <ActivityIndicator row="1" busy="{{activstate}}"  width="100" height="100" class="activity-indicator" visibility="{{visstat}}"/>
+ <ns:Carousel finite="true" height="250" items="{{menu}}"   indicatorColor="#fff" indicatorOffset="0,0" showIndicator="false" selectedPage="{{pageno}}">
+                <ns:Carousel.itemTemplate>
+                 <ns:CarouselItem backgroundColor="white" verticalAlignment="middle">
+                    <StackLayout   class="card "  orientation="vertical" height="250" verticalAlignment="center">
+                      <Label class="menu-head" marginTop="20" text="{{days+' Menu'}}" horizontalAlignment="center" />
+                   <Card:CardView class="card text-menu-item3" marginTop="10" marginLeft="10" marginBottom="10" backgroundColor="white" marginRight="10" class="cardStyle" elevation="10" radius="25" >
+                <StackLayout  orientation="vertical" height="250" verticalAlignment="center">
+               <Label class="text-menu-item" text="{{item1}}" margin="5" textWrap="true"/>
+                <Label class="text-menu-item2" text="{{item2}}" margin="5" textWrap="true"/>
+                <Label class="text-menu-item" text="{{item3}}" margin="5" textWrap="true"/>
+                 <Label class="text-menu-item2" text="{{item4}}" margin="5" textWrap="true"/>
+                 </StackLayout>
+                  </Card:CardView>
+             </StackLayout>
+                      </ns:CarouselItem>
+                </ns:Carousel.itemTemplate>
+        </ns:Carousel>
+
+        <DockLayout stretchLastChild="false">
+               <RL:Ripple dock="left" onTap="prev">  <Label margin="15" text="< PREV"  ></Label></RL:Ripple>
+               <RL:Ripple  dock="right" onTap="next">   <Label margin="15" text="NEXT >" ></Label></RL:Ripple>
+        </DockLayout>
+         <Label class="week-head" marginTop="0" text="{{'Lunch Menu for Week of '+week}}" horizontalAlignment="center" />
+  <Label marginTop="20" class="lunch-get-head" text="Get Krishna Lunch" horizontalAlignment="center" />
+
+  <Label marginTop="15" class="pick-up-head" text="Quantity" horizontalAlignment="center"/>
+ <StackLayout orientation="horizontal"  horizontalAlignment="center" margin="10">
+     <RL:Ripple onTap="decrement" > <Image onTap="decrement"  src="res://minus" width="50" height="50" /></RL:Ripple>
+         <Label  class="qt-head" text="{{qty}}" />
+      <RL:Ripple onTap="increment" > <Image onTap="increment" src="res://plus"  width="50" height="50" /></RL:Ripple>
+ </StackLayout>
+
+    <Label marginTop="20" class="pick-up-head" text="Pickup At" horizontalAlignment="center" />
+  
+
+       <ListPicker marginLeft="10" marginRight="10" items="{{ pickuplist }}" selectedIndex="{{selectedIndex}}" loaded="onListPickerLoaded" class="p-16 picker pick-items" row="1"/>
+               
+
+ 
+
+  <Card:CardView width="250" marginTop="20" marginLeft="20" marginBottom="20" marginRight="20"  elevation="10" radius="50">
+    <RL:Ripple class="btn-bg"  onTap="launchPay"><StackLayout margin="10">
+                 <label text="{{'Pay Now $'+price}}" horizontalAlignment="center"  textWrap="true" class="btn-text" /></StackLayout></RL:Ripple>  
+  </Card:CardView>
+
+  <StackLayout orientation="horizontal" horizontalAlignment="center">
+  
+<Card:CardView  marginTop="20" marginLeft="10" marginBottom="20" marginRight="0" class="cardStyle btn-bg" elevation="10" radius="50" verticalAlignment="center">
+     <RL:Ripple class="btn-bg" onTap="launchPayWeek" >  <StackLayout margin="10">
+             <label class="btn-text" text="Pay For Week $30" horizontalAlignment="center"  textWrap="true" /></StackLayout></RL:Ripple> 
+  </Card:CardView>
+  <Card:CardView  marginTop="20" marginLeft="10" marginBottom="20" marginRight="10" class="cardStyle" elevation="10" radius="50"  verticalAlignment="center" >
+   <RL:Ripple class="btn-bg" onTap="launchPayMon" ><StackLayout margin="10">
+                 <label class="btn-text" text="Pay For Month $120" horizontalAlignment="center"  textWrap="true" /></StackLayout></RL:Ripple>  
+  </Card:CardView>
+  </StackLayout>
+
+    <Label class="note-head" marginTop="20" text="Note: All orders after 10 am will be counted towards next day's Krishna Lunch." textWrap="true" horizontalAlignment="center" />
+
+ 
+</StackLayout></ScrollView>
+</Page>
