@@ -18,6 +18,10 @@ var qty=1;
 var price=6;
 var days=['Monday','Tuesday','Wednesday','Thursday','Friday'];
 var selectedIndex=3;
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
 function onPageLoaded(args) {
     viewModel.set("pageno", pageno);
     var page = args.object;
@@ -98,10 +102,10 @@ exports.launchPay = function() {
     }else{
         qty = qty + "%20Boxes";
     }
-    var pickuplist = viewModel.get("pickup-list");
+    var pickuplist = viewModel.get("pickuplist");
     var lock = pickuplist[selectedIndex];
     var loc = String(lock); 
-    loc = loc.replace(' ','%20');
+    loc = loc.replaceAll(' ','%20');
 
 
    var webUrl = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DJWVKLTR7332J&on0=Quantity&os0="+qty+"&on1=Pick-up%20Locations&os1="+loc;
@@ -111,7 +115,7 @@ exports.launchPay = function() {
 exports.launchPayMon = function() {
     viewModel.set("htmlString","");
     selectedIndex =  viewModel.get("selectedIndex");
-    var pickuplist = viewModel.get("pickup-list");
+    var pickuplist = viewModel.get("pickuplist");
     var lock = pickuplist[selectedIndex];
     var loc = String(lock); 
     loc = loc.replace(' ','%20');
@@ -122,7 +126,7 @@ exports.launchPayMon = function() {
 exports.launchPayWeek = function() {
     viewModel.set("htmlString","");
     selectedIndex =  viewModel.get("selectedIndex");
-    var pickuplist = viewModel.get("pickup-list");
+    var pickuplist = viewModel.get("pickuplist");
     var lock = pickuplist[selectedIndex];
     var loc = String(lock); 
     loc = loc.replace(' ','%20');
